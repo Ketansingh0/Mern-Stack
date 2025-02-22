@@ -1,0 +1,7 @@
+1. Event Driven
+2. Single Threaded
+3. V8 vs libuv
+4. Node Runtime
+5. Event Loop
+6. Async Code
+7. Blocking Code
