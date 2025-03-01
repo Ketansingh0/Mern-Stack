@@ -1,0 +1,22 @@
+1. Event Driven
+2. Single Threaded
+3. V8 vs libuv
+4. Node Runtime
+5. Event Loop
+6. Async Code
+7. Blocking Code
+
+// Blocking Code
+
+const jsonString = JSON.stringify(jsonObject);
+console.log(jsonString);
+fs.writeFileSync("user-details.txt.", jsonString);
+res.setHeader("Location","/");
+
+// In place of above code we will use Async operation
+console.log(jsonString);
+fs.writeFile("user-details.txt", jsonString, error => {
+  res.setHeader("Location", "/");
+  res.statusCode = 302;
+  return res.end();
+});
